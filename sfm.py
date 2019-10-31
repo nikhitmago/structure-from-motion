@@ -1,14 +1,3 @@
-'''
-CS 677 Fall 2019 - HW 3
-SIFT Matching and SFM
-
-note:
-Since SIFT is patented, you might need to choose (reinstall) appropriate opencv version:
-Try (in your virtual env):
-pip install opencv-contrib-python==3.4.2.16
-https://stackoverflow.com/questions/52305578/sift-cv2-xfeatures2d-sift-create-not-working-even-though-have-contrib-instal
-'''
-
 import os
 import sys
 import cv2
@@ -185,7 +174,7 @@ class SFMSolver(object):
         3. Use ratio test to get good matches.
         4. Store points retrieved from the good matches.
 
-        Hints: See SIFT_create
+        : See SIFT_create
         For feature matching you could use
         - BruteForceMatcher
         (https://docs.opencv.org/3.4/d3/da1/classcv_1_1BFMatcher.html)
@@ -351,8 +340,8 @@ def intrinsic_reader(txt_file):
 
 def main():
 
-    img_pattern = './HW3_data/rdimage.???.ppm'
-    intrinsic = intrinsic_reader('./HW3_data/intrinsics.txt')
+    img_pattern = './data/rdimage.???.ppm'
+    intrinsic = intrinsic_reader('./data/intrinsics.txt')
     output_dir = './output01'
     safe_mkdir(output_dir)
 
